@@ -39,3 +39,13 @@ auto bind_member = std::bind(&MyMath::multiply, &math_obj, _1, 5);
 bind_member(10); // 实际执行 math_obj.multiply(10, 5)，输出: Result: 50
 ```
 
+### function函数对象类型的应用示例_ev
+
+从function的类模板定义处得出，我们要用一个函数类型来实例化function
+
+![image-20260605210342649](pictures/image-20260605210342649.png)
+
+```cpp
+function<int(int,int)> func4 = [](int a,int b)->int{return a + b;}
+```
+
